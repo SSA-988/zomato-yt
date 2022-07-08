@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { BasketContext} from './Context';
+import Menu from './Menu';
+import HomeScreen from './screens/HomeScreen';
+import StackNavigator from './StackNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <BasketContext>
       <StatusBar style="auto" />
-    </View>
+      <StackNavigator/>
+     </BasketContext>
   );
 }
 
